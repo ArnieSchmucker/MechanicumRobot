@@ -1,0 +1,53 @@
+<!DOCTYPE html><html>
+<head>
+  <title>ESP IOT DASHBOARD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon"  type="image/png" href="favicon.png">
+</head>
+<body>
+    <div>            
+    <button class="button-on" onclick="toggle(this)" id="901">FOR</button>
+    </div>
+    <br>
+    <div>
+      <button class="button-on" onclick="toggle(this)" id="906">LEFT</button>
+      <button class="button-on" onclick="toggle(this)" id="904">LEFT</button>
+      <button class="button-off" onclick="toggle(this)" id="902">OFF</button>
+      <button class="button-on" onclick="toggle(this)" id="905">RIGHT</button>
+      <button class="button-on" onclick="toggle(this)" id="907">RIGHT</button>
+    </div>
+    <br>
+    <div>
+     <button class="button-on" onclick="toggle(this)" id="903">AFT</button>
+    </div>
+    <br>
+    <div>
+     <button class="button-on" onclick="toggle(this)" id="908">UP</button>
+     <button class="button-on" onclick="toggle(this)" id="910">OFF</button>
+     <button class="button-on" onclick="toggle(this)" id="909">DOWN</button>
+    </div>
+    <br>
+    <div class="card-grid">
+      <div class="card">
+        <p class="card-title">Throttle</p>
+        <p class="switch">
+          <input type="range" id="pwmSlider" oninput="updateSliderPWM(this)" min="0" max="100" step="1" value ="0" class="slider">
+        </p>
+        <p class="state">Brightness: <span id="textSliderValue"></span> &percnt;</p>
+      </div>
+    </div>
+    <br>
+    <div class="card-grid">
+      <div class="card">
+        <p class="card-title">Pincer Open/Close</p>
+        <p class="switch">
+          <input type="range" id="pincerSlider" oninput="updateSliderPincer(this)" min="200" max="300" step="1" value ="0" class="slider">
+        </p>
+        <p class="state">Brightness: <span id="textPincerSliderValue"></span> &percnt;</p>
+      </div>
+    </div>
+
+<script src="/script.js"></script>
+</body>
+</html>
